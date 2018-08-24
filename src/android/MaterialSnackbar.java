@@ -8,17 +8,17 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 import android.support.design.widget.Snackbar;
-import android.widget.FrameLayout;
+import android.support.design.widget.CoordinatorLayout;
 import android.view.View;
 
 public class MaterialSnackbar extends CordovaPlugin {
 
-    private FrameLayout layout;
+    private CoordinatorLayout layout;
     private Snackbar snackbar;
 
   @Override
     public void initialize(CordovaInterface cordova, CordovaWebView webView) {
-        layout = (FrameLayout) webView.getView().getParent();
+        layout = (CoordinatorLayout) webView.getView().getParent();
     }
 
     @Override
